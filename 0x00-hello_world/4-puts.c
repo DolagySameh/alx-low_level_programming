@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
-* mai prints sentecs,
+* function main prints exactly with proper grammar, but the outcome is a piece of art,
 * followed by new line,
 * return 0 .
 */
