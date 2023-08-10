@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
-* function main prints exactly with proper grammar, but the outcome is a piece of art,
+* function main prints Programming is like building a multilingual puzzle,
 * followed by new line,
 * return 0 .
 */
