@@ -22,19 +22,21 @@ int main(void)
 
 				while (l <= 57)
 				{
-					if (i <= k && j <= l && i + j != k + l)
+					if (i <= k && j <= l)
 					{
-						putchar(i);
-						putchar(j);
-						putchar(' ');
-						putchar(k);
-						putchar(l);
-						if (i + j + k + l != 227)
+						if(i + j != k + l)
 						{
-							putchar(',');
+							putchar(i);
+							putchar(j);
 							putchar(' ');
-						}
-					}
+							putchar(k);
+							putchar(l);
+							if (i + j + k + l != 227)
+							{
+								putchar(',');
+								putchar(' ');
+							}
+					}	}
 				l++;
 				}
 			k++;
