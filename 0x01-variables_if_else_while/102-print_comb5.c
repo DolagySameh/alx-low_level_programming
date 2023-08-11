@@ -24,7 +24,7 @@ int main(void)
 				{
 					if (i <= k && j <= l)
 					{
-						if(i + j != k + l)
+						if (i & j != k & l)
 						{
 							putchar(i);
 							putchar(j);
