@@ -6,17 +6,23 @@
 */
 int main(void)
 {
-	int digit = 0, digit2 = 0;
+	int digit = 48;
 
-	while (digit <= 9)
+	while (digit <= 57)
 	{
-		while (digit2 <= 9)
+		int digit2 = 48;
+
+		while (digit2 <= 57)
 		{
-			if (digit != digit2)
+			if (digit != digit2 && digit < digit2)
 			{
 				putchar(digit);
-				putchar(',');
-				putchar(' ');
+				putchar(digit2);
+				if (digit + digit2 != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 			digit2++;
 		}
