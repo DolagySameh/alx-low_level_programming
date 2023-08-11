@@ -1,26 +1,34 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
-* main - Entry point
-*
-* Return: returns 0 when everything works fine
-*
+ * main - entry point
+ * Description:  prints all possible combinations of two two-digit numbers
+ * Return: 0
 */
-
 int main(void)
 {
-	int c;
+	int i, j;
 
-	for (c = 48; c <= 57; c++)
+	for (i = 0; i < 100; i++)
 	{
-		putchar(c);
-		if (c <= 56)
+		for (j = 0; j < 100; j++)
 		{
-			putchar(44);
-			putchar(32);
+			if (i < j)
+			{
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
-
-	putchar(10);
+	putchar('\n');
 	return (0);
 }
