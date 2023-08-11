@@ -1,48 +1,26 @@
 #include <stdio.h>
+
 /**
-* main - four compination
-* Description:unsing putchar
-* Return:0
+* main - Entry point
+*
+* Return: returns 0 when everything works fine
+*
 */
+
 int main(void)
 {
-	int i = 48;
+	int c;
 
-	while (i <= 57)
+	for (c = 48; c <= 57; c++)
 	{
-		int j = 48;
-
-		while (j <= 57)
+		putchar(c);
+		if (c <= 56)
 		{
-			int k = 48;
-
-			while (k <= 57)
-			{
-				int l = 48;
-
-				while (l <= 57)
-				{
-					if (i <= k && j <l)
-					{
-						putchar(i);
-						putchar(j);
-						putchar(' ');
-						putchar(k);
-						putchar(l);
-						if (i + j + k + l != 227)
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
-				l++;
-				}
-			k++;
-			}
-		j++;
+			putchar(44);
+			putchar(32);
 		}
-	i++;
 	}
-	putchar('\n');
+
+	putchar(10);
 	return (0);
 }
