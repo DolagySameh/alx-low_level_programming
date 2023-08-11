@@ -18,7 +18,7 @@ int main(void)
 			{
 				putchar(digit);
 				putchar(digit2);
-				if (digit + digit2 != 17)
+				if (digit + digit2 != 113)
 				{
 					putchar(',');
 					putchar(' ');
