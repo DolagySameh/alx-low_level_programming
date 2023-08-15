@@ -1,5 +1,4 @@
-#ifndef MAIN_H
-#define MAIN_H
-#include <stdio.h>
+#ifndef MYHEADERS_H
+#define MYHEADERS_H
 int _putchar(char c);
 #endif
