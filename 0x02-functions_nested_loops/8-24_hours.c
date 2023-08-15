@@ -14,7 +14,7 @@ void jack_bauer(void)
 
 		while (b <= 57)
 		{
-			if ((a <= 1 && b <= 9) || (a <= 2 && b <= 3))
+			if ((a <= 49 && b <= 57) || (a <= 50 && b <= 51))
 			{
 				int c = 48;
 
