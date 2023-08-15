@@ -8,16 +8,17 @@
 */
 int print_last_digit(int a)
 {
+	int b;
+
 	if (a < 0)
 	{
-		int b = -1 * (a % 10);
-
-		return (b);
+		b = -1 * (a % 10);
 	}
 	else
 	{
-		int b = a % 10;
-
-		return (b);
+		b = a % 10;
 	}
+	printf("%d", b);
+	return (b);
+
 }
