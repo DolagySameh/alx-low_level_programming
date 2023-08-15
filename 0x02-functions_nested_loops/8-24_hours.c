@@ -23,7 +23,7 @@ void jack_bauer(void)
 				while (d <= 57)
 				{
 					_putchar(a);
-					_puthchar(b);
+					_putchar(b);
 					_putchar(':');
 					_putchar(c);
 					_putchar(d);
