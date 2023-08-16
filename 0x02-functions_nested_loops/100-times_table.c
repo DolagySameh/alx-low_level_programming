@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
 * print_times_table - printtime table
 * Description:print time table
