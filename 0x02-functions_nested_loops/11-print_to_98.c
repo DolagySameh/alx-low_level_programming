@@ -6,10 +6,10 @@
 */
 void print_to_98(int n)
 {
+	int i;
+
 	if (n <= 98 && n != 0)
 	{
-		int i;
-
 		for (i = n; i <= 98; i++)
 		{
 			printf("%d", i);
@@ -22,8 +22,6 @@ void print_to_98(int n)
 	}
 	else if (n == 0)
 	{
-		int i;
-
  		for (i = n; i <= 98; i++)
 		{
 			printf("%d", i);
@@ -36,12 +34,10 @@ void print_to_98(int n)
 	}
 	else
 	{
-		int j;
-
-		for (j = n; j >= 98; j--)
+		for (i = n; i >= 98; i--)
 		{
-			printf("%d", j);
-			if (j != 98)
+			printf("%d", i);
+			if (i != 98)
 			{
 				_putchar(',');
 				_putchar(' ');
