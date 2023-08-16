@@ -26,8 +26,12 @@ void print_times_table(int n)
 					_putchar((z / 10) + 48);
 					_putchar((z % 10) + 48);
 				}
-				_putchar(',');
-				_putchar(' ');
+				if (j != n)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
 			}
 		_putchar('\n');
 			
