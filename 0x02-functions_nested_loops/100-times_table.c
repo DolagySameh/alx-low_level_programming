@@ -19,6 +19,13 @@ void print_times_table(int n)
 			if (z <= 9)
 			{
 				_putchar(z + 48);
+				if (j != n)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+				}
 			}
 			else
 			{
@@ -26,20 +33,24 @@ void print_times_table(int n)
 				{
 					_putchar((z / 10) + 48);
 					_putchar((z % 10) + 48);
+					if (n != j)
+					{
+						_putchar(',');
+						_puthar(' ');
+						_putchar(' ');
+					}
 				}
 				else if (z >= 100)
 				{
 					_putchar((z / 100) + 48);
 					_putchar((z / 10) % 10 + 48);
 					_putchar((z % 10) + 48);
+					if (n != j)
+					{
+						_putchar(',')
+						_putchar(' ')
+					}
 				}
-			}
-			if (j != n)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
 			}
 		}
 		_putchar('\n');
