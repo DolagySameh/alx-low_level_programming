@@ -11,16 +11,19 @@ int main(void)
 
 	unsigned long int result, i;
 
-	for (i = 0; i < 49; i++)
+	for (i = 0; i < 50; i++)
 	{
 		if (a == 20365011074)
 		{
-			printf("%lu", a);
+			printf("20365011074");
 		}
-		printf("%lu, ", a);
-		result = a + b;
-		a = b;
-		b = result;
+		if (a < 20365011074)
+		{
+			printf("%lu, ", a);
+			result = a + b;
+			a = b;
+			b = result;
+		}
 	}
 	printf("\n");
 	return (0);
