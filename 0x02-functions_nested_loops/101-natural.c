@@ -18,7 +18,7 @@ int main(void)
 	}
 	if (n2 == 5)
 	{
-		for (int j = 1; j * 5 < 1024; j++)
+		for (j = 1; j * 5 < 1024; j++)
 		{
 		sum2 = sum2 + 5 * j;
 		}
