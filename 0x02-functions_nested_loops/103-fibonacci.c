@@ -15,19 +15,12 @@ int main(void)
 	{
 		if (a % 2 == 0)
 		{
-			if (a == 20365011074)
-			{
-				printf("20365011074");
-			}
-			if (a < 2036501107)
-			{
-				printf("%lu, ", a);
-				result = a + b;
-				a = b;
-				b = result;
-			}
+			printf("%lu, ", a);
+			result = a + b;
+			a = b;
+			b = result;
 		}
 	}
-	printf("\n");
+	printf("%ld\n", result);
 	return (0);
 }
