@@ -9,11 +9,11 @@ int main(void)
 {
 	unsigned int a = 1, b = 2;
 
-	int result, i;
+	unsigned int result, i;
 
 	for (i = 0; i <= 50; i++)
 	{
-		printf("%lu, ", a);
+		printf("%u, ", a);
 		result = a + b;
 		a = b;
 		b = result;
