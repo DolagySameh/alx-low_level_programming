@@ -7,7 +7,9 @@
 */
 int main(void)
 {
-	unsigned long int a = 1, b = 2; int result, i;
+	unsigned long int a = 1, b = 2; 
+	
+	int result, i;
 
 	for (i = 0; i <= 50; i++)
 	{
