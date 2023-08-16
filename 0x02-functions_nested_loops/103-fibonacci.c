@@ -15,7 +15,6 @@ int main(void)
 	{
 		if (a % 2 == 0)
 		{
-			printf("%lu, ", a);
 			result = a + b;
 			a = b;
 			b = result;
