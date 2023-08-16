@@ -19,7 +19,7 @@ void print_times_table(int n)
 			if (z <= 9)
 			{
 				_putchar(z + 48);
-				if (j != n)
+				if (j != n || j != 9)
 				{
 					_putchar(',');
 					_putchar(' ');
