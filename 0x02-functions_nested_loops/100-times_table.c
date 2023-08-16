@@ -17,10 +17,11 @@ void print_times_table(int n)
 			z = i * j;
 			if (z <= 9)
 			{
-				_putchar(z + '0');
+				_putchar(z + 48);
 			}
 			else
-			{	if (z >= 10 && z < 100)
+			{
+				if (z >= 10 && z < 100)
 				{
 					_putchar((z / 10) + 48);
 					_putchar((z % 10) + 48);
