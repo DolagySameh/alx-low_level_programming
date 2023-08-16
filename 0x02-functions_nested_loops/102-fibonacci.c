@@ -13,10 +13,6 @@ int main(void)
 
 	for (i = 0; i < 50; i++)
 	{
-		if (i == 49)
-		{
-			printf("%lu", a);
-		}
 		printf("%lu, ", a);
 		result = a + b;
 		a = b;
