@@ -15,7 +15,7 @@ int main(void)
 	{
 		if (a == 20365011074)
 		{
-			printf("%d", a);
+			printf("%lu", a);
 		}
 		printf("%lu, ", a);
 		result = a + b;
