@@ -7,11 +7,11 @@
 */
 int main(void)
 {
-	long long int i, a = 1, b = 2,result;
+	unsigned long long i, a = 1, b = 2,result;
 
 	for (i = 0; i <= 50; i++)
 	{
-		printf("%lld, ", a);
+		printf("%llu, ", a);
 		result = a + b;
 		a = b;
 		b = result;
