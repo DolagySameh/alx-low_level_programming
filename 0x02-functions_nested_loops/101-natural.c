@@ -1,28 +1,21 @@
 #include <stdio.h>
-#include "main.h"
 /**
-* main - multiply two numbers
-* Description:sum of multiply two numbers
+* main - print
+* Description:pprint
 * Return:0
 */
 int main(void)
 {
-	int i, j, n = 3, sum = 0, sum2 = 0, n2 = 5;
+	int i = 0, sum = 0;
 
-	if (n == 3)
+	while (i < 1024)
 	{
-		for (i = 1; i * 3 < 1024; i++)
+		if ((i % 3 == 0) || (i % 5 == 0))
 		{
-			sum = sum + 3 * i;
+			sum = sum + i;
 		}
+		i++;
 	}
-	if (n2 == 5)
-	{
-		for (j = 1; j * 5 < 1024; j++)
-		{
-		sum2 = sum2 + 5 * j;
-		}
-	}
-	printf("%d\n", sum + sum2);
+	printf("%d\n", sum);
 	return (0);
 }
