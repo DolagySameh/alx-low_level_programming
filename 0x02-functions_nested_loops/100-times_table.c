@@ -1,58 +1,52 @@
-#include <stdio.h>
-#include "main.h"
+#include "holberton.h"
+
 /**
-* print_times_table - printtime table
-* Description:print time table
-* @n:first arg
-*/
+  * print_times_table - Prints a multiplication table up to param
+  * @n: The number to be treated
+  *
+  * Return: Number matrix
+  */
 void print_times_table(int n)
 {
-	int i, z;
+	int x, y, z;
 
-	for (i = 0; i <= n; i++)
+	if (n >= 0 && n <= 14)
 	{
-		int j;
-
-		for (j = 0; j <= n; j++)
+		for (x = 0; x <= n; x++)
 		{
-			z = i * j;
-			if (z <= 9)
+			for (y = 0; y <= n; y++)
 			{
-				_putchar(z + 48);
-				if (j != n)
+				z = x * y;
+				if (z > 99)
 				{
 					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
+					_putchar(32);
+					_putchar((z / 100) + '0');
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
 				}
-			}
-			else
-			{
-				if (z >= 10 && z < 100)
+				else if (z > 9)
 				{
-					_putchar((z / 10) + 48);
-					_putchar((z % 10) + 48);
-					if (j != n)
+					_putchar(',');
+					_putchar(32);
+					_putchar(32);
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
+				}
+				else
+				{
+					if (y != 0)
 					{
 						_putchar(',');
-						_putchar(' ');
-						_putchar(' ');
+						_putchar(32);
+						_putchar(32);
+						_putchar(32);
 					}
-				}
-				else if (z >= 100)
-				{
-					_putchar((z / 100) + 48);
-					_putchar((z / 10) % 10 + 48);
-					_putchar((z % 10) + 48);
-					if (j != n)
-					{
-						_putchar(',');
-						_putchar(' ');
-					}
+					_putchar(z + '0');
 				}
 			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
+
