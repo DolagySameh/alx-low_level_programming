@@ -48,6 +48,6 @@ void print_triangle(int size)
 	else if (size == 1)
 	{
 		_putchar('#');
-		_ptchar('\n');
+		_putchar('\n');
 	}
 }
