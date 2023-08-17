@@ -4,7 +4,7 @@
 * more_numbers- print
 * Description:print
 */
-void more_numbers(void);
+void more_numbers(void)
 {
 	int a = 1;
 
