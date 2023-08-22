@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "string.h"
 /**
 * _strcpy - copy
 * Description:copy
@@ -8,9 +9,9 @@
 */
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	unsigned long int i = 0;
 
-	while (src[i] != '\0')
+	while (i < strlen(src))
 	{
 		dest[i] = src[i];
 		i++;
