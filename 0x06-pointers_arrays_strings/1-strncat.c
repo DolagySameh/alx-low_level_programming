@@ -12,7 +12,7 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	int len = strlen(dest);
-	
+
 	int i = 0;
 
 	int count = 1;
@@ -24,7 +24,7 @@ char *_strncat(char *dest, char *src, int n)
 		count++;
 		if (count > n)
 			break;
-        }
-	dest[len + i]= '\0';
-        return (dest);
+	}
+	dest[len + i] = '\0';
+	return (dest);
 }
