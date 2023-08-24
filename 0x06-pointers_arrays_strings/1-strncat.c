@@ -16,7 +16,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	int count = 1;
 
-	while (*src != '\0')
+	while (*src)
 	{
 		*pptr++ = *src++;
 		count++;
