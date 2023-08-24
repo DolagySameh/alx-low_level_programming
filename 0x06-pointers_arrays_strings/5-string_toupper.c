@@ -2,9 +2,9 @@
 #include "main.h"
 /**
 * string_toupper - toupper
-* Description:uppercase
+* Description:uppercase alpha convert to
 * @a:arg
-* Retutn:pointer
+* Return:pointer
 */
 char *string_toupper(char *a)
 {
