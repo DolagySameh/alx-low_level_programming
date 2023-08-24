@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "main.h"
-#include <string.h>
 /**
 * _strncat - concatenate two string
 * Description:concatenate two string with limited number
