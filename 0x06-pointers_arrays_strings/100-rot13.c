@@ -11,12 +11,12 @@ char *rot13(char *a)
 	char alpha[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G',
 			'H', 'I', 'J', 'K', 'L', 'M', 'N',
 			'O', 'P', 'Q', 'R', 'S', 'T', 'U',
-			'V', 'W', 'X', 'Y', 'Z'};
+			'V', 'W', 'X', 'Y', 'Z', '\0'};
 
 	char num[] = {'N', 'O', 'P', 'Q', 'R', 'S', 'T',
 			'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B',
 			'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-			'K', 'L', 'M'};
+			'K', 'L', 'M', '\0'};
 
 	int i = 0, j = 0;
 
@@ -24,15 +24,15 @@ char *rot13(char *a)
 	{
 		while (alpha[j] != '\0')
 		{
-			if ((a[i] == alpha[j]) && (a[i] >= 97 && a[i] <= 122))
+			if (a[i] == alpha[j])
 			{
 				a[i] = num[j];
 				break;
 			}
-			else
+			else if (a[i] == alpha[j] + 32)
 			{
-				if (((a[i] == alpha[j] + 32)) && (a[i] >= 65 && a[i] <= 90))
-				a[i] = a[i] + 32;
+				a[i] = num[j] + 32;
+				break;
 			}
 			j++;
 		}
