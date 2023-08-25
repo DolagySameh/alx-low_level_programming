@@ -36,11 +36,6 @@ char *rot13(char *a)
 				a[i] = num[j];
 				break;
 			}
-			else if (a[i] == alpha[j] + 32)
-			{
-				a[i] = num[j] + 32;
-				break;
-			}
 			j++;
 		}
 		j = 0;
