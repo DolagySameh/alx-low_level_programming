@@ -24,15 +24,15 @@ char *rot13(char *a)
 	{
 		while (alpha[j] != '\0')
 		{
-			if (((a[i] == alpha[j]) || (a[i] == alpha[j] + 32)) &&
-				((a[i] >= 65 && a[i] <= 97) || (a[i] >= 97 && a[i] <= 122)))
+			if ((a[i] == alpha[j]) && (a[i] >= 97 && a[i] <= 122))
 			{
 				a[i] = num[j];
 				break;
 			}
 			else
 			{
-				a[i] = a[i];
+				if (((a[i] == alpha[j] + 32)) && (a[i] >= 65 && a[i] <= 90))
+				a[i] = a[i] + 32;
 			}
 			j++;
 		}
