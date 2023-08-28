@@ -23,8 +23,6 @@ char *_strstr(char *haystack, char *needle)
 			j++;
 			continue;
 		}
-		if (needle[i] == haystack[j])
-			break;
 		i++;
 	}
 	return (0);
