@@ -9,9 +9,7 @@
 */
 char *_strpbrk(char *s, char *accept)
 {
-	int i = 0, j;
-
-	char *p;
+	int i = 0;
 
 	while (s[i] != '\0')
 	{
@@ -19,7 +17,7 @@ char *_strpbrk(char *s, char *accept)
 		while (accept[j] != '\0')
 		{
 			if (s[i] == accept[j])
-			{	p = &s[i];
+			{
 				break;
 			}
 			else
@@ -34,5 +32,5 @@ char *_strpbrk(char *s, char *accept)
 	}
 	if (s[i - 1] != accept[j - 1] && s[i] == '\0' && accept[j] == '\0')
 		return (NULL);
-	return (p);
+	return (&s[i]);
 }
