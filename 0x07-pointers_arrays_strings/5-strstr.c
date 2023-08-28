@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stddef.h>
 #include "main.h"
 /**
 * _strstr -  locates a substring.
@@ -28,5 +27,5 @@ char *_strstr(char *haystack, char *needle)
 			break;
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
