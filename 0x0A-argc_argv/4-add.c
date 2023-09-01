@@ -1,6 +1,24 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+/**
+* isNum - check
+* Description:check
+* @a:arg
+* Return:int
+*/
+int isNum(char a[])
+{
+	int i = 0, l = strlen(a);
+
+	for (; i < l; i++)
+	{
+		if (!isdigit(a[i]))
+			return (1);
+	}
+	return (0);
+}
 /**
 * main - adds positive numbers.
 * Description:adds positive numbers.
@@ -20,7 +38,7 @@ int main(int argc, char *argv[])
 	{
 		while (i < argc)
 		{
-			if (!isdigit(argv[i]))
+			if (isNum(argv[i]) == 1)
 			{
 				printf("Error\n");
 				return (1);
