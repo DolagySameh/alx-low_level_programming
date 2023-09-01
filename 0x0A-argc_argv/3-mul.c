@@ -13,11 +13,19 @@ int main(int argc, char *argv[])
 
 	int result = 1;
 
-	while (i < argc)
+	if (argc - 1 == 0)
 	{
-		result = result * atoi(argv[i]);
-		i++;
+		printf("Error\n");
+		return (1);
 	}
-	printf("%d\n", result);
+	else
+	{
+		while (i < argc)
+		{
+			result = result * atoi(argv[i]);
+			i++;
+		}
+		printf("%d\n", result);
+	}
 	return (0);
 }
