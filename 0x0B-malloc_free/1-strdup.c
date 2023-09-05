@@ -11,7 +11,7 @@ char *_strdup(char *str)
 {
 	 int i = 0;
 
-	char *ptr = (char *)malloc(strlen(str));
+	char *ptr = (char *)malloc(strlen(str) + 1);
 
 	if (ptr == NULL || str == NULL)
 		return (NULL);
@@ -21,6 +21,6 @@ char *_strdup(char *str)
 		ptr[i] = str[i];
 		i++;
 	}
-	ptr[i] = '\0';
+	ptr[strlen(str) + 1] = '\0';
 	return (ptr);
 }
