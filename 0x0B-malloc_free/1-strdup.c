@@ -9,7 +9,7 @@
 */
 char *_strdup(char *str)
 {
-	 int i = 0;
+	 long unsigned int i = 0;
 
 	char *ptr = (char *)malloc(strlen(str) + 1);
 
@@ -21,6 +21,8 @@ char *_strdup(char *str)
 		ptr[i] = str[i];
 		i++;
 	}
-	ptr[strlen(str) + 1] = '\0';
+	ptr[i] = '\0';
+	if (i > strlen(str) + 1)
+		return (NULL);
 	return (ptr);
 }
