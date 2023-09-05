@@ -13,12 +13,10 @@ char *create_array(unsigned int size, char c)
 
 	if (ptr == NULL || size == 0)
 		return (NULL);
-	unsigned int i = 0;
-
-	for (; i < size; i++)
+	while (size--)
 	{
-		ptr[i] = c;
+		ptr[size] = c;
 	}
-	ptr[i] = '\0';
+	ptr[size] = '\0';
 	return (ptr);
 }
