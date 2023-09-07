@@ -1,39 +1,50 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
 /**
- * *_realloc - reallocate memory size function
- * @ptr: pointer to address of old memory location
- * @old_size: unsigned int type of old memory size
- * @new_size: unsigned int type for new memory size
- * Return:  return pointer to array
+ * *argstostr - convert arguments on command line to strings
+ * @ac: int type
+ * @av: pointer to array
+ * Return: arguments as strings
  */
 
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+char *argstostr(int ac, char **av)
 {
-	char *s;
+	int size, count, count1, count2 = 0;
+	char *ptr;
 
-	if (new_size > old_size)
+	if (ac == 0 || av == NULL)
 	{
-		s = malloc(new_size);
-		free(ptr);
-		return (s);
+		return (NULL);
 	}
-	if (new_size == old_size)
+
+	for (count = 0; count < ac; count++)
 	{
-		return (ptr);
+		for (count1 = 0; av[count][count1] != '\0'; count1++)
+		{
+			size += 1;
+		}
+		size += 1;
 	}
+	size += 1;
+
+	ptr = malloc(sizeof(char) * size);
 	if (ptr == NULL)
-	{
-		s = malloc(new_size);
-		free(ptr);
-		return (s);
-	}
-	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
+	for (count = 0; count < ac; count++)
+	{
+		for (count1 = 0; av[count][count1] != '\0'; count1++)
+		{
+			ptr[count2] = av[count][count1];
+			count2++;
+		}
+		ptr[count2] = '\n';
+		count2++;
+	}
+	ptr[count2] = '\0';
 	return (ptr);
 }
