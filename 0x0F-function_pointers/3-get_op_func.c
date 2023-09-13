@@ -6,7 +6,7 @@
 * @s:first arg
 * Return:int
 */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int b
 {
 	op_t ops[] = {
 	{"+", op_add},
