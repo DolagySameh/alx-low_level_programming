@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int (*ptr)(int, int), a, b;
 
 	if (argc != 4)
-        {
+	{
 		printf("Erorr\n");
 		exit(98);
 	}
