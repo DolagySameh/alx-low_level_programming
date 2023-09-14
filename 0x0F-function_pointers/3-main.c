@@ -10,7 +10,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int (*ptr)(int, int), a, b;
+	int (*ptr)(int, int), a, b, res;
 
 	if (argc != 4)
 	{
@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
 		printf("Erorr\n");
 		exit(100);
 	}
-	printf("%d\n", ptr(a, b));
+	res = ptr(a, b);
+	printf("%d\n", res);
 	return (0);
 }
