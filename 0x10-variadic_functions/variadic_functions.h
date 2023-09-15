@@ -9,5 +9,5 @@ typedef struct print
 {
 	char *symbol;
 	void (*print_func)(va_list arg);
-}func_printer;
+} func_printer;
 #endif
