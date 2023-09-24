@@ -2,14 +2,6 @@
 #include "lists.h"
 #include <stddef.h>
 /**
-* before_main - print pefor main
-*/
-void before_main(void) __attribute__((constructor));
-void before_main(void)
-{
-	print_befor();
-}
-/**
  * main - check the code
  *
  * Return: Always 0.
