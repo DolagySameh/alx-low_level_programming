@@ -29,18 +29,21 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int sum = 0;
 	int len = strlen(b) - 1;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 	while (b[i] != '\0')
 	{
 		if (b[i] != 48 && b[i] != 49)
 			return (0);
-		else if (b[i] == 48)
-			sum += 0 * power(2, len);
-		else if (b[i] == 49)
-			sum += 1 * power(2, len);
-		i++;
-		len--;
+		if (b[i] & 1)
+		{
+			if (b[i] == 48)
+				sum += 0 * power(2, len);
+			if (b[i] == 49)
+				sum += 1 * power(2, len);
+			i++;
+			len--;
+		}
 	}
 	return (sum);
 }
