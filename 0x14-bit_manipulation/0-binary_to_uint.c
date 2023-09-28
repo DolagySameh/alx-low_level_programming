@@ -23,9 +23,9 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != 48 && b[i] != 49)
 			return (0);
-		if (b[i] == 48)
+		if (!(b[i] & 1))
 			sum += 0 << len;
-		if (b[i] == 49)
+		if (b[i] & 1)
 			sum += 1 << len;
 		i++;
 		len--;
