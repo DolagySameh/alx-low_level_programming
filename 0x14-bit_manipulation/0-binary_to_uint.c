@@ -41,7 +41,6 @@ unsigned int binary_to_uint(const char *b)
 			sum += 1 * power(2, len);
 		i++;
 		len--;
-		}
 	}
 	return (sum);
 }
