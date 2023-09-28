@@ -25,7 +25,8 @@ int power(int base, int exp)
 */
 unsigned int binary_to_uint(const char *b)
 {
-	int i = 0, sum = 0;
+	int i = 0;
+	unsigned int sum = 0;
 	int len = strlen(b) - 1;
 
 	if (b == NULL)
