@@ -2,23 +2,6 @@
 #include <string.h>
 #include "main.h"
 /**
-* power - calculate power
-* @base: first arg
-* @exp: second arg
-* Return: int
-*/
-int power(int base, int exp)
-{
-	long int value = 1;
-
-	while (exp != 0)
-	{
-		value *= base;
-		--exp;
-	}
-	return (value);
-}
-/**
 * binary_to_uint - converts a binary number to an unsigned int
 * @b: char to be converted
 * Return: the converted number, or 0
@@ -27,8 +10,11 @@ unsigned int binary_to_uint(const char *b)
 {
 	int i = 0;
 	unsigned int sum = 0;
-	int len = strlen(b) - 1;
+	int len;
 
+	while (b[i] != '\0')
+		len++;
+	len = len - 1;
 	if (!b)
 		return (0);
 	while (b[i] != '\0')
