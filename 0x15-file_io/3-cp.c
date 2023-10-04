@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
-* _exit - exit status
+* _exit11 - exit status
 * @error: first arg
 * @str: escond arg
 * @fd: thied arg
