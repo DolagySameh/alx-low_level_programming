@@ -18,10 +18,10 @@ int _exit11(int error, char *str, int fd)
 			dprintf(2, "Usage: cp file_from file_to\n");
 			exit(error);
 		case 98:
-			dprintf(2, "Error: Can't read from file NAME_OF_THE_FILE %s\n", str);
+			dprintf(2, "Error: Can't read from file NAME_OF_THE_FILE %s\n", s);
 			exit(error);
 		case 99:
-			dprintf(2, "Error: Can't write to NAME_OF_THE_FILE %s\n", str);
+			dprintf(2, "Error: Can't write to NAME_OF_THE_FILE %s\n", s);
 			exit(error);
 		case 100:
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
